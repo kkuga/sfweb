@@ -1,0 +1,14 @@
+admin_news:
+    resource: "@AdminNewsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+visiteurs_accueil:
+    resource: "@VisiteursAccueilBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin_user:
+    resource: "@AdminUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

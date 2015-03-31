@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <p>coucou</p>
+        {% for n in news %}    
+            {{ n.titre }}<br/>
+            {{ n.text }} par {{ n.auteur }}
+        {% endfor %}      
+    </div>
+{% endblock %}

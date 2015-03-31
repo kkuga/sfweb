@@ -1,0 +1,29 @@
+{% extends "::base.html.twig" %} 
+
+{% block title %}Ajouter une news {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form method="POST" {{ form_enctype(form) }}>
+            <label>Titre de la news:</label>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                {{ form_widget(form.titre, {'attr': {'class': 'form-control', 'placeholder' : 'Titre de la news'}} ) }}
+            </div>
+            
+             <label>Contenu de la news:</label>
+                {{ form_widget(form.text, {'attr': {'class': 'form-control', 'placeholder' : 'Contenu de la news'}} ) }}
+            
+            
+            <label>Auteur:</label>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                {{ form_widget(form.auteur, {'attr': {'class': 'form-control', 'placeholder' : 'Auteur de la news'}} ) }}
+            </div>
+            
+            {{ form_widget(form) }}
+            <input type="submit" class="btn btn-block btn-success"/>
+        </form>
+
+     </div>
+{% endblock %}
